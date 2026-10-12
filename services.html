@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الخدمات</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخدمات - ساعد</title>
+<link rel="stylesheet" href="style.css">
+<script>if(localStorage.getItem('logged')!=='yes'){window.location.href='index.html'}</script>
+</head>
 <body>
-<div class="header"><h1 class="project-title">💜 ساعد SA3ID</h1><div class="marquee"><span>📚 تصفح خدمات زملائك في الرازي - أسعار طلابية وجودة عالية - اطلب الآن 💜</span></div><div class="nav-links"><a href="index.html">دخول</a><span class="sep">|</span><a href="about.html">عن ساعد</a><span class="sep">|</span><a href="services.html" class="active">الخدمات</a><span class="sep">|</span><a href="contact.html">تواصل</a></div></div>
-<div class="container"><div class="main-card" style="display:inline-block"><h2>📚 الخدمات المتاحة الآن</h2></div><table class="services-table"><tr><th>الخدمة</th><th>المجال</th><th>السعر</th><th>الحالة</th></tr><tr><td>🎨 تصميم بوربوينت</td><td>تصميم</td><td>3000 ج</td><td><span class="available">متاح</span></td></tr><tr><td>📊 شرح SPSS</td><td>احصاء</td><td>مجانا</td><td><span class="available">متاح</span></td></tr><tr><td>💻 صيانة لابتوب</td><td>تقني</td><td>5000 ج</td><td><span class="busy">مشغول</span></td></tr><tr><td>✍️ سيرة ذاتية ATS</td><td>كتابة</td><td>2000 ج</td><td><span class="available">متاح</span></td></tr></table></div>
-<div class="footer">© 2026 ساعد - مجمع الرازي</div>
-<button class="theme-btn" onclick="changeTheme()">🎨</button><script>let t=['','dark','purple'],c=localStorage.getItem('saed-theme')||'';document.body.className=c;let i=t.indexOf(c);function changeTheme(){i=(i+1)%t.length;document.body.className=t[i];localStorage.setItem('saed-theme',t[i])}</script>
-</body></html>
+<header>
+<div class="logo">💜 ساعد</div>
+<nav>
+<a href="about.html">عن المنصة</a>
+<a href="services.html">الخدمات</a>
+<a href="contact.html">تواصل</a>
+<button class="logout-btn" onclick="logout()">تسجيل خروج</button>
+</nav>
+</header>
+
+<div class="marquee"><span>📚 تصفح خدمات زملائك - برمجة، تصميم، مونتاج، ترجمة، كتابة بحوث بأسعار طلابية 💜</span></div>
+
+<div class="content">
+<h2>خدماتنا الطلابية</h2>
+<p style="margin:10px 0 20px;color:#666">كل الخدمات مقدمة من طلاب جامعة الرازي بأسعار خاصة للطلاب</p>
+
+<div class="services-grid">
+<div class="service-card">
+<h3>💻 برمجة ومواقع</h3>
+<p>تصميم مواقع، مشاريع تخرج، تطبيقات موبايل</p>
+<span class="price">يبدأ من 5000 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+
+<div class="service-card">
+<h3>🎨 تصميم جرافيك</h3>
+<p>شعارات، بوسترات، عروض بوربوينت، سيرة ذاتية</p>
+<span class="price">يبدأ من 2000 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+
+<div class="service-card">
+<h3>🎬 مونتاج وتصوير</h3>
+<p>مونتاج فيديو، تصوير مناسبات، تصميم ريلز</p>
+<span class="price">يبدأ من 3000 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+
+<div class="service-card">
+<h3>🌍 ترجمة</h3>
+<p>ترجمة بحوث، مقالات، مستندات عربي - انجليزي</p>
+<span class="price">يبدأ من 1500 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+
+<div class="service-card">
+<h3>📝 كتابة بحوث</h3>
+<p>كتابة وتنسيق بحوث، تقارير، واجبات جامعية</p>
+<span class="price">يبدأ من 2500 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+
+<div class="service-card">
+<h3>📚 شرح ودروس</h3>
+<p>دروس خصوصية، شرح مواد، مساعدة في المذاكرة</p>
+<span class="price">يبدأ من 1000 جنيه</span>
+<button>اطلب الخدمة</button>
+</div>
+</div>
+</div>
+
+<script>function logout(){localStorage.clear();window.location.href='index.html'}</script>
+</body>
+</html>
