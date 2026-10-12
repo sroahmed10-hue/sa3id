@@ -7,8 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
-<div class="marquee"><span>💜 مرحبا بكم في منصة ساعد - مهارات طلاب جامعة الرازي في مكان واحد 💜 خدمات طلابية بأسعار طلابية 💜</span></div>
-
+<div class="marquee"><span>💜 مرحبا بكم في منصة ساعد - مهارات طلاب جامعة الرازي في مكان واحد 💜</span></div>
 <div class="login-box">
 <h1>💜 ساعد SA3ID</h1>
 <h2>تسجيل الدخول</h2>
@@ -16,14 +15,13 @@
 <input type="password" id="password" placeholder="كلمة السر">
 <button onclick="login()">دخول</button>
 </div>
-
 <script>
 function login(){
-  let u = document.getElementById('username').value;
-  let p = document.getElementById('password').value;
-  if(u==="" || p===""){ alert("اكتب اسم المستخدم وكلمة السر"); return; }
-  localStorage.setItem('logged','yes');
-  window.location.href='about.html';
+let u=document.getElementById('username').value;
+let p=document.getElementById('password').value;
+if(u===""||p===""){alert("اكتب اسم المستخدم وكلمة السر");return;}
+localStorage.setItem('logged','yes');
+window.location.href='about.html';
 }
 </script>
 </body>
