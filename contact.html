@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>تواصل معنا</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا</title>
+<link rel="stylesheet" href="style.css">
+<script>if(localStorage.getItem('logged')!=='yes'){window.location.href='index.html'}</script>
+</head>
 <body>
-<div class="header"><h1 class="project-title">💜 ساعد SA3ID</h1><div class="marquee"><span>📩 تواصل معنا - رأيك يهمنا - منصة ساعد ترد عليك في أقل من 24 ساعة 💜</span></div><div class="nav-links"><a href="index.html">دخول</a><span class="sep">|</span><a href="about.html">عن ساعد</a><span class="sep">|</span><a href="services.html">الخدمات</a><span class="sep">|</span><a href="contact.html" class="active">تواصل معنا</a></div></div>
-<div class="form-box"><h2>📩 تواصل معنا</h2><form><label>الاسم:</label><input type="text" placeholder="اسمك الكامل" required><label>البريد:</label><input type="email" placeholder="example@razi.edu.sd" required><label>الرسالة:</label><textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea><button type="submit">ارسال الرسالة ✨</button></form></div>
-<div class="footer">© 2026 منصة ساعد - مجمع الرازي</div>
-<button class="theme-btn" onclick="changeTheme()">🎨</button><script>let t=['','dark','purple'],c=localStorage.getItem('saed-theme')||'';document.body.className=c;let i=t.indexOf(c);function changeTheme(){i=(i+1)%t.length;document.body.className=t[i];localStorage.setItem('saed-theme',t[i])}</script>
-</body></html>
+<header>
+<div class="logo">💜 ساعد</div>
+<nav>
+<a href="about.html">عن المنصة</a>
+<a href="services.html">الخدمات</a>
+<a href="contact.html">تواصل</a>
+<button class="logout-btn" onclick="logout()">تسجيل خروج</button>
+</nav>
+</header>
+<div class="marquee"><span>📩 تواصل معنا - نرد عليك في أقل من 24 ساعة 💜</span></div>
+<div class="content">
+<h2>تواصل معنا</h2>
+<p>راسلنا عبر المنصة.</p>
+</div>
+<script>function logout(){localStorage.clear();window.location.href='index.html'}</script>
+</body>
+</html>
