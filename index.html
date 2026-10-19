@@ -7,22 +7,38 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
-<div class="marquee"><span>💜 مرحبا بكم في منصة ساعد - مهارات طلاب جامعة الرازي في مكان واحد 💜</span></div>
-<div class="login-box">
+
+<div class="marquee">
+<span>💜 مرحباً بكم في منصة ساعد - مهارات طلاب جامعة الرازي في مكان واحد 💜</span>
+</div>
+
+<main class="login-box">
 <h1>💜 ساعد SA3ID</h1>
 <h2>تسجيل الدخول</h2>
-<input type="text" id="username" placeholder="اسم المستخدم">
-<input type="password" id="password" placeholder="كلمة السر">
-<button onclick="login()">دخول</button>
-</div>
+
+<form onsubmit="login(event)">
+<input type="text" id="username" placeholder="اسم المستخدم" required>
+<input type="password" id="password" placeholder="كلمة السر" required>
+<button type="submit">دخول</button>
+</form>
+</main>
+
 <script>
-function login(){
-let u=document.getElementById('username').value;
-let p=document.getElementById('password').value;
-if(u===""||p===""){alert("اكتب اسم المستخدم وكلمة السر");return;}
-localStorage.setItem('logged','yes');
-window.location.href='about.html';
+function login(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!username || !password) {
+        alert('اكتب اسم المستخدم وكلمة السر');
+        return;
+    }
+
+    localStorage.setItem('logged', 'yes');
+    window.location.href = 'about.html';
 }
 </script>
+
 </body>
 </html>
