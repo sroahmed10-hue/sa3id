@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الخدمات</title>
-<link rel="stylesheet" href="CSS/style.css">
-<script>if(localStorage.getItem('logged')!=='yes'){window.location.href='index.html'}</script>
+<link rel="stylesheet" href="style.css">
+<script>
+if (localStorage.getItem('logged') !== 'yes') {
+    window.location.replace('index.html');
+}
+</script>
 </head>
 <body>
+
 <header>
 <div class="logo">💜 ساعد</div>
 <nav>
@@ -17,21 +22,77 @@
 <button class="logout-btn" onclick="logout()">تسجيل خروج</button>
 </nav>
 </header>
-<div class="marquee"><span>📚 تصفح خدمات زملائك - برمجة، تصميم، مونتاج، ترجمة، كتابة بحوث بأسعار طلابية 💜</span></div>
-<div class="content">
+
+<div class="marquee">
+<span>📚 تصفح خدمات زملائك - برمجة، تصميم، مونتاج، ترجمة، كتابة بحوث بأسعار طلابية 💜</span>
+</div>
+
+<main class="content">
 <h2>خدماتنا الطلابية</h2>
-<div class="services-grid">
-<div class="service-card"><h3>💻 برمجة ومواقع</h3><p>مواقع، مشاريع تخرج، تطبيقات</p><span class="price">من 10000 جنيه</span></div>
-<div class="service-card"><h3>🎨 تصميم جرافيك</h3><p>شعارات، بوسترات، بوربوينت</p><span class="price">من 5000 جنيه</span></div>
-<div class="service-card"><h3>🎬 مونتاج</h3><p>مونتاج فيديو وتصوير</p><span class="price">من 4000 جنيه</span></div>
-<div class="service-card"><h3>🌍 ترجمة</h3><p>ترجمة بحوث عربي-انجليزي</p><span class="price">من 2500 جنيه</span></div>
-<div class="service-card"><h3>📝 كتابة بحوث</h3><p>كتابة وتنسيق بحوث جامعية</p><span class="price">من 3500 جنيه</span></div>
-<div class="service-card"><h3>📚 دروس خصوصية</h3><p>شرح مواد ومساعدة مذاكرة</p><span class="price">من 3000 جنيه</span></div>
+<p>تصفح الخدمات المتاحة واختر الخدمة المناسبة لك من الجدول التالي.</p>
+
+<div class="table-container">
+<table class="services-table">
+<thead>
+<tr>
+<th>رقم</th>
+<th>الخدمة</th>
+<th>الوصف</th>
+<th>السعر يبدأ من</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>💻 برمجة ومواقع</td>
+<td>مواقع، مشاريع تخرج، تطبيقات</td>
+<td>10000 جنيه</td>
+</tr>
+<tr>
+<td>2</td>
+<td>🎨 تصميم جرافيك</td>
+<td>شعارات، بوسترات، بوربوينت</td>
+<td>5000 جنيه</td>
+</tr>
+<tr>
+<td>3</td>
+<td>🎬 مونتاج</td>
+<td>مونتاج فيديو وتصوير</td>
+<td>4000 جنيه</td>
+</tr>
+<tr>
+<td>4</td>
+<td>🌍 ترجمة</td>
+<td>ترجمة بحوث عربي-إنجليزي</td>
+<td>2500 جنيه</td>
+</tr>
+<tr>
+<td>5</td>
+<td>📝 كتابة بحوث</td>
+<td>كتابة وتنسيق بحوث جامعية</td>
+<td>3500 جنيه</td>
+</tr>
+<tr>
+<td>6</td>
+<td>📚 دروس خصوصية</td>
+<td>شرح مواد ومساعدة مذاكرة</td>
+<td>3000 جنيه</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div style="text-align:center; margin-top:30px;">
-<a href="contact.html" style="display:inline-block; background:#4a3aff; color:#fff; padding:14px 40px; border-radius:10px; text-decoration:none; font-size:18px; font-weight:bold;">📩 تواصل لطلب الخدمات</a>
+
+<div class="service-action">
+<a href="contact.html">📩 تواصل لطلب الخدمات</a>
 </div>
-</div>
-<script>function logout(){localStorage.clear();window.location.href='index.html'}</script>
+</main>
+
+<script>
+function logout() {
+    localStorage.removeItem('logged');
+    window.location.href = 'index.html';
+}
+</script>
+
 </body>
 </html>
