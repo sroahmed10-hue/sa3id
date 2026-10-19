@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>عن ساعد</title>
-<link rel="stylesheet" href="CSS/style.css">
-<script>if(localStorage.getItem('logged')!=='yes'){window.location.href='index.html'}</script>
+<link rel="stylesheet" href="style.css">
+<script>
+if (localStorage.getItem('logged') !== 'yes') {
+    window.location.replace('index.html');
+}
+</script>
 </head>
 <body>
+
 <header>
 <div class="logo">💜 ساعد</div>
 <nav>
@@ -17,11 +22,22 @@
 <button class="logout-btn" onclick="logout()">تسجيل خروج</button>
 </nav>
 </header>
-<div class="marquee"><span>💜 تعرف على قصة ساعد ورؤيتنا لدعم طلاب الرازي 💜</span></div>
-<div class="content">
+
+<div class="marquee">
+<span>💜 تعرف على قصة ساعد ورؤيتنا لدعم طلاب الرازي 💜</span>
+</div>
+
+<main class="content">
 <h2>فكرة المشروع</h2>
 <p>منصة ساعد تجمع مهارات طلاب جامعة الرازي - تصميم، برمجة، ترجمة، مونتاج وكل الخدمات بأسعار خاصة للطلاب لمساعدة بعضنا البعض.</p>
-</div>
-<script>function logout(){localStorage.clear();window.location.href='index.html'}</script>
+</main>
+
+<script>
+function logout() {
+    localStorage.removeItem('logged');
+    window.location.href = 'index.html';
+}
+</script>
+
 </body>
 </html>
