@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ساعد - تسجيل الدخول</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساعد - دخول</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
 
-<div class="marquee">
-<span>💜 مرحباً بكم في منصة ساعد - مهارات طلاب جامعة الرازي في مكان واحد 💜</span>
-</div>
+    <div class="marquee">
+        <span>💜 منصة ساعد لطلاب الرازي - خدمات تعليمية وتقنية مميزة 💜</span>
+    </div>
 
-<main class="login-box">
-<h1>💜 ساعد SA3ID</h1>
-<h2>تسجيل الدخول</h2>
+    <div class="login-box">
 
-<form onsubmit="login(event)">
-<input type="text" id="username" placeholder="اسم المستخدم" required>
-<input type="password" id="password" placeholder="كلمة السر" required>
-<button type="submit">دخول</button>
-</form>
-</main>
+        <img src="poster.jpg" alt="صورة منصة ساعد"
+             style="display:block; width:100%; max-width:300px; height:auto; margin:0 auto 20px; border-radius:12px;">
 
-<script>
-function login(event) {
-    event.preventDefault();
+        <h1>💜 ساعد</h1>
+        <h2>مرحباً بك في منصة ساعد</h2>
 
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
+        <form onsubmit="login(event)">
+            <input type="text" id="username" placeholder="اسم المستخدم" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
 
-    if (!username || !password) {
-        alert('اكتب اسم المستخدم وكلمة السر');
-        return;
-    }
+    </div>
 
-    localStorage.setItem('logged', 'yes');
-    window.location.href = 'about.html';
-}
-</script>
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (username !== '' && password !== '') {
+                localStorage.setItem('logged', 'yes');
+                window.location.href = 'about.html';
+            }
+        }
+    </script>
 
 </body>
 </html>
