@@ -3,93 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تواصل معنا - ساعد</title>
+<title>تواصل معنا</title>
 <link rel="stylesheet" href="style.css">
-
-<script>
-if (localStorage.getItem('logged') !== 'yes') {
-    window.location.replace('index.html');
-}
-</script>
+<script>if(localStorage.getItem('logged')!=='yes'){window.location.href='index.html';}</script>
 </head>
-
 <body>
-
 <header>
-    <div class="logo">💜 ساعد</div>
-
-    <nav>
-        <a href="about.html">عن المنصة</a>
-        <a href="services.html">الخدمات</a>
-        <a href="contact.html">تواصل</a>
-        <button type="button" class="logout-btn" onclick="logout()">
-            تسجيل خروج
-        </button>
-    </nav>
+<div class="logo">💜 ساعد</div>
+<nav>
+<a href="about.html">عن المنصة</a>
+<a href="services.html">الخدمات</a>
+<a href="contact.html">تواصل</a>
+<button class="logout-btn" id="logoutButton">تسجيل خروج</button>
+</nav>
 </header>
-
-<div class="marquee">
-    <span>📩 تواصل معنا - نرد عليك في أقل من 24 ساعة 💜</span>
+<div class="marquee"><span>📩 تواصل معنا - نرد عليك في أقل من 24 ساعة 💜</span></div>
+<div class="content">
+<h2>تواصل معنا</h2>
+<form id="contactForm">
+<input type="text" name="name" placeholder="اسمك" required>
+<input type="email" name="email" placeholder="إيميلك" required>
+<select name="service" required>
+<option value="">اختر الخدمة</option>
+<option>برمجة</option>
+<option>تصميم</option>
+<option>مونتاج</option>
+<option>ترجمة</option>
+<option>بحوث</option>
+<option>دروس</option>
+</select>
+<textarea name="message" placeholder="رسالتك..." required></textarea>
+<button type="submit" class="send-btn">إرسال الرسالة</button>
+</form>
 </div>
-
-<main class="content">
-    <h2>تواصل معنا</h2>
-
-    <p>يسعدنا تواصلك معنا. املأ البيانات التالية واختر الخدمة التي تحتاج إليها.</p>
-
-    <form class="contact-form" onsubmit="sendMsg(event)">
-
-        <input
-            type="text"
-            name="name"
-            placeholder="اسمك"
-            required
-        >
-
-        <input
-            type="email"
-            name="email"
-            placeholder="إيميلك"
-            required
-        >
-
-        <select name="service" required>
-            <option value="">اختر الخدمة</option>
-            <option value="برمجة">برمجة</option>
-            <option value="تصميم">تصميم</option>
-            <option value="مونتاج">مونتاج</option>
-            <option value="ترجمة">ترجمة</option>
-            <option value="بحوث">بحوث</option>
-            <option value="دروس">دروس</option>
-        </select>
-
-        <textarea
-            name="message"
-            placeholder="اكتب رسالتك هنا..."
-            required
-        ></textarea>
-
-        <button type="submit" class="send-btn">
-            📩 إرسال الرسالة
-        </button>
-
-    </form>
-</main>
-
-<script>
-function logout() {
-    localStorage.removeItem('logged');
-    window.location.href = 'index.html';
-}
-
-function sendMsg(event) {
-    event.preventDefault();
-
-    alert('✅ تم إرسال رسالتك بنجاح!');
-
-    event.target.reset();
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
