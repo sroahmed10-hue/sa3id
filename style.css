@@ -227,63 +227,74 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-/* جدول الخدمات */
+/* === تم التعديل هنا: كروت الخدمات بدل الجدول === */
 
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 22px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
 }
 
-.services-table {
-    width: 100%;
-    min-width: 560px;
-    border-collapse: collapse;
+.service-card {
     background: var(--white);
-    text-align: right;
-}
-
-.services-table th {
-    background: linear-gradient(90deg, #54249b, #7940c5);
-    color: var(--white);
-    padding: 15px 12px;
-    font-size: 15px;
-}
-
-.services-table td {
-    padding: 14px 12px;
-    border-bottom: 1px solid #eee5f8;
-    vertical-align: middle;
-}
-
-.services-table tbody tr:nth-child(even) {
-    background: #f8f3ff;
-}
-
-.services-table tbody tr {
-    transition: background 0.2s;
-}
-
-.services-table tbody tr:hover {
-    background: #eee2ff;
-}
-
-.services-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-.services-table td:first-child {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
     text-align: center;
-    font-weight: bold;
-    color: var(--primary);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
 }
 
-.services-table td:last-child {
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--secondary);
+    box-shadow: 0 12px 30px rgba(108, 53, 201, 0.18);
+}
+
+.service-card .icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #5a3a85;
+    margin-bottom: 12px;
+}
+
+.service-card .price {
+    display: inline-block;
+    background: var(--light);
     color: var(--primary-dark);
     font-weight: bold;
-    white-space: nowrap;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin: 10px 0 14px;
+    border: 1px solid var(--border);
+}
+
+.card-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-dark), var(--secondary));
+    color: var(--white);
+    padding: 9px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(108, 53, 201, 0.25);
 }
 
 /* زر طلب الخدمات */
@@ -427,12 +438,6 @@ nav a:hover {
         font-size: 23px;
     }
 
-    .services-table th,
-    .services-table td {
-        padding: 11px 9px;
-        font-size: 13px;
-    }
-
     .service-action a {
         width: 100%;
         padding: 12px 10px;
@@ -450,4 +455,4 @@ nav a:hover {
         animation: none !important;
         transition: none !important;
     }
-    }
+}
