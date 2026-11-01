@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
 }
-
 :root {
     --primary: #6c35c9;
     --primary-dark: #45208a;
@@ -14,11 +13,7 @@
     --border: #e4d5f7;
     --shadow: 0 8px 25px rgba(77, 35, 130, 0.12);
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
+html { scroll-behavior: smooth; }
 body {
     font-family: Tahoma, Arial, sans-serif;
     direction: rtl;
@@ -27,21 +22,8 @@ body {
     min-height: 100vh;
     line-height: 1.8;
 }
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 16px;
-}
-
-button {
-    cursor: pointer;
-}
-
-/* الشريط المتحرك */
-
+button, input, select, textarea { font-family: inherit; font-size: 16px; }
+button { cursor: pointer; }
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -51,25 +33,15 @@ button {
     padding: 11px 0;
     font-weight: bold;
 }
-
 .marquee span {
     display: inline-block;
     padding-right: 100%;
     animation: moveText 22s linear infinite;
 }
-
 @keyframes moveText {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(100%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
 }
-
-/* صفحة تسجيل الدخول */
-
 .login-page {
     display: flex;
     flex-direction: column;
@@ -78,13 +50,7 @@ button {
     padding: 20px;
     background: radial-gradient(circle at top, #e5d2ff, #f8f4ff 65%);
 }
-
-.login-page > .marquee {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
+.login-page > .marquee { position: absolute; top: 0; right: 0; }
 .login-box {
     width: 100%;
     max-width: 420px;
@@ -95,20 +61,9 @@ button {
     border-radius: 22px;
     text-align: center;
     box-shadow: var(--shadow);
-    animation: appear 0.6s ease;
 }
-
-.login-box h1 {
-    color: var(--primary);
-    font-size: 30px;
-    margin-bottom: 8px;
-}
-
-.login-box h2 {
-    font-size: 22px;
-    margin-bottom: 25px;
-}
-
+.login-box h1 { color: var(--primary); font-size: 30px; margin-bottom: 8px; }
+.login-box h2 { font-size: 22px; margin-bottom: 25px; }
 .login-box input {
     display: block;
     width: 100%;
@@ -119,17 +74,11 @@ button {
     outline: none;
     background: #fcfaff;
 }
-
-.login-box input:focus,
-.content input:focus,
-.content select:focus,
-.content textarea:focus {
+.login-box input:focus, .content input:focus, .content select:focus, .content textarea:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(108, 53, 201, 0.12);
 }
-
-.login-box button,
-.send-btn {
+.login-box button, .send-btn {
     width: 100%;
     padding: 13px 20px;
     border: none;
@@ -137,17 +86,7 @@ button {
     background: linear-gradient(90deg, var(--primary-dark), var(--secondary));
     color: var(--white);
     font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.login-box button:hover,
-.send-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(108, 53, 201, 0.25);
-}
-
-/* رأس الصفحة */
-
 header {
     display: flex;
     align-items: center;
@@ -158,50 +97,11 @@ header {
     background: var(--white);
     box-shadow: 0 3px 15px rgba(50, 25, 80, 0.08);
 }
-
-.logo {
-    color: var(--primary);
-    font-size: 27px;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-
-nav a:hover {
-    color: var(--primary);
-    background: var(--light);
-}
-
-.logout-btn {
-    padding: 9px 14px;
-    border: none;
-    border-radius: 8px;
-    background: #fce7f3;
-    color: #a21caf;
-    font-weight: bold;
-}
-
-.logout-btn:hover {
-    background: #f5c6e4;
-}
-
-/* محتوى الصفحات */
-
+.logo { color: var(--primary); font-size: 27px; font-weight: bold; }
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+nav a { color: var(--text); text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: bold; }
+nav a:hover { color: var(--primary); background: var(--light); }
+.logout-btn { padding: 9px 14px; border: none; border-radius: 8px; background: #fce7f3; color: #a21caf; font-weight: bold; }
 .content {
     width: 90%;
     max-width: 1100px;
@@ -210,32 +110,14 @@ nav a:hover {
     background: var(--white);
     border-radius: 18px;
     box-shadow: var(--shadow);
-    animation: appear 0.6s ease;
 }
-
-.content h2 {
-    color: var(--primary);
-    font-size: 27px;
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee2ff;
-}
-
-.content p {
-    font-size: 16px;
-    line-height: 2;
-    margin-bottom: 12px;
-}
-
-/* === تم التعديل هنا: كروت الخدمات بدل الجدول === */
-
+.content h2 { color: var(--primary); font-size: 27px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #eee2ff; }
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
     margin-top: 25px;
 }
-
 .service-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -243,216 +125,16 @@ nav a:hover {
     padding: 24px 20px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+    transition: 0.25s;
 }
-
-.service-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--secondary);
-    box-shadow: 0 12px 30px rgba(108, 53, 201, 0.18);
-}
-
-.service-card .icon {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.service-card h3 {
-    color: var(--primary);
-    font-size: 19px;
-    margin: 10px 0;
-}
-
-.service-card p {
-    font-size: 14px;
-    color: #5a3a85;
-    margin-bottom: 12px;
-}
-
-.service-card .price {
-    display: inline-block;
-    background: var(--light);
-    color: var(--primary-dark);
-    font-weight: bold;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin: 10px 0 14px;
-    border: 1px solid var(--border);
-}
-
-.card-btn {
-    display: inline-block;
-    background: linear-gradient(90deg, var(--primary-dark), var(--secondary));
-    color: var(--white);
-    padding: 9px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(108, 53, 201, 0.25);
-}
-
-/* زر طلب الخدمات */
-
-.service-action {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.service-action a {
-    display: inline-block;
-    background: linear-gradient(90deg, #4a3aff, #8b42d8);
-    color: var(--white);
-    padding: 13px 28px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.service-action a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 16px rgba(74, 58, 255, 0.22);
-}
-
-/* نموذج التواصل */
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    display: block;
-    width: 100%;
-    padding: 13px 15px;
-    border: 1px solid #d9c6f3;
-    border-radius: 10px;
-    background: #fcfaff;
-    color: var(--text);
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-form textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-
-.contact-form .send-btn {
-    align-self: stretch;
-}
-
-/* ظهور المحتوى */
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* الأجهزة اللوحية */
-
-@media (max-width: 850px) {
-    header {
-        flex-direction: column;
-        padding: 18px 4%;
-    }
-
-    .content {
-        width: 94%;
-        padding: 24px;
-    }
-
-    nav {
-        gap: 6px;
-    }
-}
-
-/* الهواتف */
-
-@media (max-width: 520px) {
-    body {
-        font-size: 15px;
-    }
-
-    .login-page > .marquee {
-        font-size: 13px;
-    }
-
-    .login-box {
-        padding: 28px 20px;
-        border-radius: 16px;
-    }
-
-    .login-box h1 {
-        font-size: 25px;
-    }
-
-    header {
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    nav {
-        gap: 4px;
-    }
-
-    nav a {
-        padding: 7px 8px;
-        font-size: 13px;
-    }
-
-    .logout-btn {
-        padding: 8px 9px;
-        font-size: 13px;
-    }
-
-    .content {
-        width: 94%;
-        margin: 22px auto;
-        padding: 20px 15px;
-    }
-
-    .content h2 {
-        font-size: 23px;
-    }
-
-    .service-action a {
-        width: 100%;
-        padding: 12px 10px;
-        font-size: 15px;
-    }
-}
-
-/* مراعاة تفضيل تقليل الحركة */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation: none !important;
-        transition: none !important;
-    }
-}
+.service-card:hover { transform: translateY(-6px); border-color: var(--secondary); box-shadow: 0 12px 30px rgba(108, 53, 201, 0.18); }
+.service-card .icon { font-size: 42px; margin-bottom: 10px; }
+.service-card h3 { color: var(--primary); font-size: 19px; margin: 10px 0; }
+.service-card p { font-size: 14px; color: #5a3a85; margin-bottom: 12px; }
+.service-card .price { display: inline-block; background: var(--light); color: var(--primary-dark); font-weight: bold; padding: 6px 14px; border-radius: 20px; margin: 10px 0 14px; border: 1px solid var(--border); }
+.card-btn { display: inline-block; background: linear-gradient(90deg, var(--primary-dark), var(--secondary)); color: var(--white); padding: 9px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 14px; }
+.service-action { text-align: center; margin-top: 30px; }
+.service-action a { display: inline-block; background: linear-gradient(90deg, #4a3aff, #8b42d8); color: var(--white); padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; max-width: 650px; margin: 0 auto; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 13px 15px; border: 1px solid #d9c6f3; border-radius: 10px; background: #fcfaff; outline: none; }
+.contact-form textarea { min-height: 140px; }
